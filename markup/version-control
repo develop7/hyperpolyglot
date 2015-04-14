@@ -81,7 +81,7 @@ $ git remote set-branches [#REMOTE REMOTE] [@@--@@add] \
 ||list or remove untracked files||$ git clean (-f|-n) _
  _
 ##gray|-f: //remove untracked files// _
--n: //list untracked files//##||$ hg purge [-p] _
+-n: //list untracked files//##||$ hg purge [-op] _
  _
 ##gray|-p: //remove untracked files// _
  _
@@ -193,7 +193,7 @@ tip //refers to the most recent revision in the repository.//##||
  _
 //when a commit has multiple parents (i.e. the commit is a merge), use a circumflex followed by a number:// _
  _
-@<&nbsp;&nbsp;>@bbf3837d6^2##|| ||
+@<&nbsp;&nbsp;>@bbf3837d6^2##||##gray|//Negative integers are treated as sequential offsets from the tip, with -1 denoting the tip, -2 denoting the revision prior to the tip, and so forth.//##||
 ||resolve commit notation||$ git rev-parse [#COMMIT COMMIT] _
  _
 ##gray|//e.g. to get commit id of parent of tip:// _
